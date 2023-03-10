@@ -1,10 +1,12 @@
 <?php
 
+namespace services;
+
 interface DatabaseConnectionInterface {
     public static function getInstance();
 }
 
-class DatabaseConnection implements DatabaseConnectionInterface {
+class DBConnection implements DatabaseConnectionInterface {
 
     private static $dbInstance = null;
 
