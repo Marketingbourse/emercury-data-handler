@@ -25,8 +25,8 @@ class DatabaseConnection implements DatabaseConnectionInterface {
 
             // Create a new PDO connection
             try {
-                self::$dbInstance = new PDO("'mysql:host=$_ENV['HOST'];dbname='$_ENV['DB_NAME']'", "$_ENV['USER']", "$_ENV['PASSWORD']");
-			} catch (Exception $e) {
+                self::$dbInstance = new PDO('mysql:host='.$_ENV['HOST'].';dbname='.$_ENV['DB_NAME'].'', $_ENV['USER'], $_ENV['PASSWORD']);
+            } catch (Exception $e) {
                 echo $e->getMessage();
             }
 
